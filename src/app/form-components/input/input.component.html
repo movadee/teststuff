@@ -1,0 +1,12 @@
+<div class="form-group" [formGroup]="form">
+  <div class="input-field col {{question.col}}">
+    <input [placeholder]="question.value.placeholder" [type]="question.type" class="validate form-control" [id]="question.id" [formControlName]="question.id">
+    <label [for]="question.id">{{question.value.label}}</label>
+    <!-- <span class="helper-text" data-error="wrong"></span> -->
+    <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+    <span class="helper-text" *ngIf="{{question.id}}.errors.required" data-error="required"></span>
+    <span class="helper-text" *ngIf="{{question.id}}.errors.minlength" data-error="minlength"></span>
+  </div> -->
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="row">
+  <form [formGroup]="form" class="col s12">
+    <app-form-field *ngFor="let question of questions.fields" [form]="form" [question]="question"></app-form-field>
+  </form>
+</div>

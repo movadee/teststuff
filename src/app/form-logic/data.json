@@ -1,0 +1,74 @@
+
+{
+    "fields": [
+      {
+        "id": "firstName",
+        "type": "text",
+        "col": "l12",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "First Name",
+          "placeholder": "Jane"
+        },
+        "data": "Lucy",
+        "validation": [
+          {
+            "type": "required",
+            "message": "First name is required",
+            "arguments": false
+          }
+        ]
+      },
+      {
+        "id": "lastName",
+        "type": "text",
+        "col": "l12",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "Last Name",
+          "placeholder": "Doe"
+        },
+        "data": "",
+        "validation": [
+          {
+            "type": "required",
+            "message": "Last Name is required",
+            "arguments": false
+          },
+          {
+            "type": "minLength",
+            "message": "Min 3 required",
+            "arguments": 3
+          }
+        ]
+      },
+      {
+        "id": "maidenName",
+        "type": "email",
+        "col": "l6",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "bla",
+          "placeholder": ""
+        },
+        "data": "",
+        "validation": [
+         
+        ]
+      },
+      {
+        "id": "emailCheckbox",
+        "col": "l6",
+        "componentType": "formCheckbox",
+        "value": {
+          "label": "Can we send you emails?",
+          "placeholder": ""
+        },
+        "data": "",
+        "validation": [
+  
+        ]
+      }
+    ]
+  }
+  

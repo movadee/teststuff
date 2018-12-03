@@ -1,32 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form-logic/form/form.component';
-import { FormFieldComponent } from './form-logic/form-field/form-field.component';
-import { CheckboxComponent } from './form-components/checkbox/checkbox.component';
-import { InputComponent } from './form-components/input/input.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+const routes: Routes = [
+  {
+    path: 'form',
+    loadChildren: './form/form.module#FormModule'
+  },
+  { path: '',   redirectTo: '', pathMatch: 'full' },
+  { path: '**', component: AppComponent }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormComponent,
-    FormFieldComponent,
-    CheckboxComponent,
-    InputComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [ InputComponent, CheckboxComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

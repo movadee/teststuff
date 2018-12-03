@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { InputComponent } from 'src/app/form-components/input/input.component';
-import { CheckboxComponent } from 'src/app/form-components/checkbox/checkbox.component';
-import { FormBaseComponent } from 'src/app/form-components/form-base.component';
+import { InputComponent } from '../../form-components/input/input.component';
+import { CheckboxComponent } from '../../form-components/checkbox/checkbox.component';
+import { FormBaseComponent } from '../../form-components/form-base.component';
 
 @Component({
   selector: 'app-form-field',

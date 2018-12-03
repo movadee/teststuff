@@ -11,6 +11,7 @@ declare var M: any;
 export class AppComponent implements OnInit {
   ngOnInit() {
     // tslint:disable-next-line:no-unused-expression
-    new M.Tooltip(document.querySelector('.tooltipped'));
+    // new M.Tooltip(document.querySelector('.tooltipped'));
+    // new M.Modal(document.querySelector('.modal'));
   }
 }
